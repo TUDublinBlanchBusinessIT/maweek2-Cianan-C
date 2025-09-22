@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
 
 
 export default function App() {
-  const [fullname, setFullname] = useState("Cianán Carey");
+  const [fullname, setFullname] = useState("Cianan Carey");
   return (
     <View>
       <Text style={styles.paragraph}>Hello, {fullname}</Text>
