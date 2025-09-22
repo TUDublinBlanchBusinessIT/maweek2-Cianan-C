@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TextInput} from 'react-native';
 import React, {useState} from 'react';
 
 const styles = StyleSheet.create({
@@ -13,10 +13,17 @@ const styles = StyleSheet.create({
 
 
 export default function App() {
-  const [fullname, setFullname] = useState("Cianan Carey");
+  const [fullName, setFullName] = useState("Cianán Carey");
   return (
     <View>
-      <Text style={styles.paragraph}>Hello, {fullname}</Text>
+      <Text style={styles.paragraph}>Hello, {fullName}</Text>
+
+      <TextInput
+        style={styles.paragraph}
+        onChangeText={setFullName}
+        placeholder="Hello"
+      />
+
     </View>
   );
 };
