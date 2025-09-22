@@ -1,17 +1,22 @@
-import {StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
+import React, {useState} from 'react';
 
-// You can import supported modules from npm
-import { Card } from 'react-native-paper';
+const styles = StyleSheet.create({
+  paragraph: {
+    margin: 50,
+    fontSize: 18,
+    textDecorationLine: 'underline',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
 
-// or any files within the Snack
-import AssetExample from './components/AssetExample';
 
 export default function App() {
+  const [fullname, setFullname] = useState("Cianán Carey");
   return (
     <View>
-      <Text>Hello, World</Text>
+      <Text style={styles.paragraph}>Hello, {fullname}</Text>
     </View>
   );
 };
-
-
